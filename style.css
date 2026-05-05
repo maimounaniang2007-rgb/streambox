@@ -8,26 +8,28 @@ body {
     background: #0F172A;
     color: #F8FAFC;
     font-family: Arial, sans-serif;
-    text-align: center;
 }
 
+/* HEADER — FLEXBOX */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #1E293B;
-    padding: 30px 20px;
+    padding: 1rem 2rem;
 }
 
 h1 {
     color: #F97316;
-    font-size: 5rem;
+    font-size: 3rem;
     font-family: Georgia, serif;
-    margin-bottom: 20px;
 }
 
 nav a {
     color: #F8FAFC;
     text-decoration: none;
-    margin: 0 30px;
-    font-size: 1.5rem;
+    margin-left: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -35,75 +37,65 @@ nav a:hover {
     color: #14B8A6;
 }
 
+/* HERO */
 #hero {
-    width: 70%;
-    margin: 60px auto;
+    width: 80%;
+    margin: 50px auto;
     background: #1E293B;
-    padding: 80px 20px;
+    padding: 60px 20px;
     border-radius: 12px;
+    text-align: center;
 }
 
 #hero h2 {
-    font-size: 4rem;
-    font-family: Georgia, serif;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 15px;
 }
 
 #hero p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #94A3B8;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 button {
     background: #F97316;
     color: white;
     border: none;
-    padding: 18px 55px;
-    font-size: 1.5rem;
+    padding: 15px 40px;
+    font-size: 1.2rem;
     border-radius: 8px;
     cursor: pointer;
 }
 
-
-#movies {
-    margin: 60px 0;
+/* MOVIE SECTIONS */
+.movie-section {
+    width: 90%;
+    margin: 50px auto;
 }
 
-.card {
-    display: inline-block;
-    width: 250px;
-    background: #1E293B;
-    padding: 30px 20px;
-    margin: 20px;
-    border-radius: 12px;
-}
-
-.card h3 {
+.movie-section h2 {
+    margin-bottom: 20px;
     font-size: 2rem;
-    margin-bottom: 12px;
 }
 
-.card p {
-    font-size: 1.3rem;
-    color: #94A3B8;
-    font-style: italic;
-}
-#movies {
-    margin: 70px 0;
-    text-align: center;
+/* ✅ GRID APPLIED TO NAV (FIX) */
+.category-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* FORCE 3 IN ONE LINE */
+    gap: 1rem;
+    padding: 2rem;
 }
 
+/* CARDS */
 .card {
-    display: inline-block;
-    width: 220px;
     background: #1E293B;
     padding: 20px;
-    margin: 20px;
     border-radius: 10px;
     text-align: center;
 }
 
+/* IMAGE PLACEHOLDER */
 .card::before {
     content: "";
     display: block;
@@ -115,13 +107,11 @@ button {
 }
 
 .card h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #F8FAFC;
 }
 
 .card p {
-    font-size: 1.2rem;
     color: #94A3B8;
     font-style: italic;
 }
